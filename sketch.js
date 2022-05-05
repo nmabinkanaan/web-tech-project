@@ -47,21 +47,25 @@ function keyPressed() {
     unicorn.jump();
   }
 }
-
 function draw() {
+  score.innerText++;
   if (random(1) < 0.005) {
     trains.push(new Train());
   }
 
   background(bImg);
-  for (let t of trains) {
+  for (let t of trains ) { 
     t.move();
+    
     t.show();
+    
     if (unicorn.hits(t)) {
       console.log('game over');
+      //console.log('Your score'+core.innerText);
+      alert("Your score "+score.innerText);
       noLoop();
     }
-  }
+   }
 
   unicorn.show();
   unicorn.move();
