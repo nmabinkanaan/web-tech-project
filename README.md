@@ -47,7 +47,7 @@ When you get the high score, your score will appear as the highest score in the 
   ![GitHub Light](https://github.com/nmabinkanaan/web-tech-project/blob/main/ReadMeimage/TheGame.gif)
 
 
-##Installation:
+## Installation:
  - First install XAMPP in your laptop and turn on
  - Second open phpMyadmin and create database name ( GameDB ) 
  - Third install web-tech-project folder
@@ -56,7 +56,7 @@ When you get the high score, your score will appear as the highest score in the 
 
 
 
-##Input: 
+## Input: 
 
 | Keys | Actions |
 | --- | --- |
