@@ -5,68 +5,94 @@
 // Google Chrome Dinosaur Game (Unicorn, run!)
 // https://editor.p5js.org/codingtrain/sketches/v3thq2uhk
 
-let unicorn;
+let tweety;
 let uImg;
 let tImg;
 let bImg;
-let trains = [];
-let soundClassifier;
+let sylevsters = [];
+// let soundClassifier;
 
-function preload() {
+ function preload() {
   const options = {
-    probabilityThreshold: 0.95
-  };
-  soundClassifier = ml5.soundClassifier('SpeechCommands18w', options);
-  uImg = loadImage('unicorn.png');
-  tImg = loadImage('train.png');
-  bImg = loadImage('background.jpg');
+     probabilityThreshold: 0.95
+   };
+  // soundClassifier = ml5.soundClassifier('SpeechCommands18w', options);
+  uImg = loadImage('tweety1.PNG');
+  tImg = loadImage('sylevster.png');
+  bImg = loadImage('background1.jpg');
 }
 
 function mousePressed() {
-  trains.push(new Train());
+  sylevsters.push(new Sylevster());
 }
 
 function setup() {
-  createCanvas(800, 450);
-  unicorn = new Unicorn();
-  soundClassifier.classify(gotCommand);
+  // createCanvas(900, 400);
+  createCanvas(1290, 600);
+  tweety = new Tweety();
+  // soundClassifier.classify(gotCommand);
 }
 
-function gotCommand(error, results) {
-  if (error) {
-    console.error(error);
-  }
-  console.log(results[0].label, results[0].confidence);
-  if (results[0].label == 'up') {
-    unicorn.jump();
-  }
-}
+// function gotCommand(error, results) {
+//   if (error) {
+//     console.error(error);
+//   }
+//   console.log(results[0].label, results[0].confidence);
+//   // if (results[0].label == 'up') {    
+//   //   tweety.jump();
+//   // }
+// }
 
 function keyPressed() {
   if (key == ' ') {
-    unicorn.jump();
+    tweety.jump();
   }
 }
+
 function draw() {
-  score.innerText++;
+  let b = false;
+
   if (random(1) < 0.005) {
-    trains.push(new Train());
+    sylevsters.push(new Sylevster());
   }
 
   background(bImg);
-  for (let t of trains ) { 
+
+  
+  for (let t of sylevsters) {
     t.move();
-    
     t.show();
     
-    if (unicorn.hits(t)) {
+    if (tweety.hits(t)) {      
       console.log('game over');
-      //console.log('Your score'+core.innerText);
-      alert("Your score "+score.innerText);
+      b= true;
       noLoop();
     }
-   }
+  }
 
-  unicorn.show();
-  unicorn.move();
+  tweety.show();
+
+  tweety.move();
+
+  if (b){
+    $("#result").replaceWith("<p>current result scores : "+sylevsters.length +"</p>");
+    $.ajax({
+      url: "saveScore.php",    
+      type: "POST",      
+      data: {
+          "score": sylevsters.length,
+          "action": "save"
+      },
+      success: function(response) {                              
+        var data = JSON.parse(JSON.stringify(response));                
+        if (data == "not found session") {
+            var url = "login.php";
+            window.location.assign(url);
+        } else {
+            //alert(data);                      
+            $("#resultMaxScore").replaceWith("<p>Maximum result of all the playres is: "+ data +"</p>");
+        }       
+      }
+    });
+  }
 }
