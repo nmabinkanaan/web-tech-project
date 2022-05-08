@@ -9,11 +9,11 @@ In this project, we proposed Tweety Bird and Sylvester game which was inspir
 
  ## Flow Chart
  
+ ![This is an image](https://github.com/nmabinkanaan/web-tech-project/blob/main/ReadMeimage/Flowchart.jpg)
  
  
  
- 
-  ## how to play
+  ## How to Play
   
 to play, you need to register your name, email, password Then the game appears after login page
 Now you are Tweety Bird and you must avoid all Sylvester by jumping on them. When you want to jump, you have to press the spacebar
