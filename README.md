@@ -9,16 +9,25 @@ In this project, we proposed Tweety Bird and Sylvester game which was inspir
 
  ## Flow Chart
  
- ![This is an image](https://github.com/nmabinkanaan/web-tech-project/blob/main/ReadMeimage/Flowchart.jpg)
+ 
+![GitHub Light](https://github.com/nmabinkanaan/web-tech-project/blob/main/ReadMeimage/Flowchart.jpg)
  
  
+## Game Characters
+
+The game characters are inspired by the famous cartoon Tweety Bird and Sylvester, in which the Sylvester(the cat) always tries to catch Tweety (the bird)
+ 
+ ![GitHub Light](https://github.com/nmabinkanaan/web-tech-project/blob/main/ReadMeimage/Sylevster.png)
+ 
+  ![GitHub Light](https://github.com/nmabinkanaan/web-tech-project/blob/main/ReadMeimage/tweety.png)
  
   ## How to Play
   
 to play, you need to register your name, email, password Then the game appears after login page
 Now you are Tweety Bird and you must avoid all Sylvester by jumping on them. When you want to jump, you have to press the spacebar
 The score you reach will be calculated and compared with all other players' scores
-When you get the high score, your score will appear as the highest score in the game
+When you get the high score, your score will appear as the highest score in the game.
+
 
 
   
