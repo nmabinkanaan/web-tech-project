@@ -36,6 +36,8 @@ if (!isset($_SESSION['id'] )){
   <div id="resultMaxScore"> </div>
 
 <script>  
+  
+  
 
 function getData(){  
   $.ajax({  
