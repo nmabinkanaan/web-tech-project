@@ -19,9 +19,9 @@ if (!isset($_SESSION['id'] )){
   
 </head>
 <body onload="javascript:getData()"> 
-<div class"container">  
-  <script src="unicorn.js"></script>
-  <script src="train.js"></script>
+<div class="container " >  
+  <script src="tweety.js"></script>
+  <script src="sylevster.js"></script>
   <script src="sketch.js"></script>
 
   
