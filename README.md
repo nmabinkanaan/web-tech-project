@@ -9,10 +9,8 @@ In this project, we proposed Tweety Bird and Sylvester game which was inspir
    ### Objectives 
    
    - Understand the basic of PHP to build a database which include sign in ,sign up and logout files.
-
-    - Building a game that calculate the maximum scores of all players
-
-    - Validate the game to ensure its efficiency.
+   - Building a game that calculate the maximum scores of all players
+   - Validate the game to ensure its efficiency.
 
 
 
