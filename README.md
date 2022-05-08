@@ -35,6 +35,7 @@ Now you are Tweety Bird and you must avoid all Sylvester by jumping on them. W
 The score you reach will be calculated and compared with all other players' scores
 When you get the high score, your score will appear as the highest score in the game.
 
+  ![GitHub Light](https://github.com/nmabinkanaan/web-tech-project/blob/main/ReadMeimage/TheGame.gif)
 
 
   
